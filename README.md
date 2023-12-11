@@ -14,15 +14,15 @@ I worked with 2 datasets that resided in S3:
 
 ### Files
 
-- dwh.cfg -- The config file that contains all important redshift database information
+- dwh.cfg. The config file that contains all important redshift database information
 
-- create_delete_cluster.py -- the script has two main functions: creating and deleting Redshift cluster. When a user runs the sceript, they will be asked first if they want to create or delete cluster. In the case when a user chooses 'create', the script will also save newly created IAM role and an endpoint address to the file dwh.cfg
+- create_delete_cluster.py. The script has two main functions: creating and deleting Redshift cluster. When a user runs the sceript, they will be asked first if they want to create or delete cluster. In the case when a user chooses 'create', the script will also save newly created IAM role and an endpoint address to the file dwh.cfg
 
-- sql_quieries.py -- the python file contains all SQL queries needed for dropping, creating and inserting operation
+- sql_quieries.py. The python file contains all SQL queries needed for dropping, creating and inserting operation
 
-- create_tables.py -- the script connects to a Redshift cluster and creates staging tables for copying data from S3 and tables for a star schema
+- create_tables.py. The script connects to a Redshift cluster and creates staging tables for copying data from S3 and tables for a star schema
 
--- etl.py -- the script connects to a Redshift cluster and will copy data from S3 repository to staging tables and then will insert values into tables created by the previous script 
+- etl.py. The script connects to a Redshift cluster and will copy data from S3 repository to staging tables and then will insert values into tables created by the previous script 
 
 
 ### How to run the project
