@@ -160,13 +160,10 @@ def main():
     if user_response == 'create':
         
         config = configparser.ConfigParser()
-
         ec2, s3, iam, redshift = create_resources(config)
-        
         print('resources are created')
 
         role_arn = create_role(iam, config)
-        
         print('role is created')
 
         create_cluster(role_arn, redshift, config)
@@ -174,9 +171,7 @@ def main():
     elif user_response == 'delete':
         
         config = configparser.ConfigParser()
-        
         ec2, s3, iam, redshift = create_resources(config)
-        
         delete_cluster(redshift, config)
    
     else:
